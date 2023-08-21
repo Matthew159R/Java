@@ -11,7 +11,7 @@ public class ProjectJava {
     public static void main(String[] args) {
         
         try {
-            String filePath = "C:\\Users\\ALUNO\\Desktop\\Cadastro de usuário em Java\\Banco de dados.txt";
+            String filePath = "Banco de dados.txt";
             FileInputStream file = new FileInputStream(filePath);
             FileWriter fileWriter = new FileWriter(filePath, true);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
