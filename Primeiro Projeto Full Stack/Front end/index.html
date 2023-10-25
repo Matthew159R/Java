@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response java</title>
+</head>
+<body>
+    <h1>Exibindo usuários</h1>
+    <div>
+        
+    </div>
+
+    <script>
+        const container = document.querySelector("div");
+
+    fetch('http://localhost:8080/api/data', {
+        method: 'GET',
+        mode: 'cors',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+
+        data.forEach((user) => {
+            const containerUsers = `
+            <h3>ID: ${user.id}</h3>
+            <h3>Nome: ${user.nome}</h3>
+            <h3>Email: ${user.email}</h3>
+            <hr>
+            `
+            container.innerHTML += containerUsers
+        })
+        
+    })
+    .catch(error => {
+        console.error('Erro:', error);
+    });
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+com\mycompany\testespring\TesteSpring.class
+com\mycompany\testespring\CorsConfig.class
+com\mycompany\testespring\ApiController.class
+com\mycompany\testespring\ConnectionToDatabase.class
